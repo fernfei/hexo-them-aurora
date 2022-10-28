@@ -46,11 +46,6 @@ export default defineComponent({
   setup() {
     const { t } = useI18n()
     const appStore = useAppStore()
-    setInterval(() => {
-      let friends = ref(appStore.themeConfig.friends.friends)
-      console.log(friends)
-    }, 1000)
-
     return {
       t,
       friends: computed(() => appStore.themeConfig.friends.friends)
